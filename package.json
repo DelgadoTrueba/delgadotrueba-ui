@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/DelgadoTrueba/delgadotrueba-ui/issues"
   },
-  "homepage": "https://github.com/DelgadoTrueba/delgadotrueba-ui#readme"
+  "homepage": "https://github.com/DelgadoTrueba/delgadotrueba-ui#readme",
+  "devDependencies": {
+    "@stencil/core": "2.18.0",
+    "create-stencil": "3.1.0"
+  }
 }
