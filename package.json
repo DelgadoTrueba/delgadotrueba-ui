@@ -31,7 +31,8 @@
     "st:test": "stencil test --spec --e2e",
     "st:test.watch": "stencil test --spec --e2e --watchAll",
     "sb:start": "start-storybook -p 6006 -s dist",
-    "sb:build": "build-storybook"
+    "sb:build": "build-storybook",
+    "start": "npx concurrently --kill-other -n \"STENCIL, STORYBOOK\" -c \"bgBlue.bold,bgGreen.bold,bgMagenta.bold\" \"npm run st:build:watch\" \"npx wait-on http://localhost:3333/ && npm run sb:start\""
   },
   "devDependencies": {
     "@babel/core": "7.20.2",
@@ -45,11 +46,13 @@
     "@storybook/web-components": "6.5.13",
     "@types/jest": "27.0.3",
     "babel-loader": "8.3.0",
+    "concurrently": "7.5.0",
     "create-stencil": "3.1.0",
     "jest": "27.4.5",
     "jest-cli": "27.4.5",
     "lit-html": "2.4.0",
     "puppeteer": "10.0.0",
-    "storybook": "6.5.13"
+    "storybook": "6.5.13",
+    "wait-on": "6.0.1"
   }
 }
