@@ -1,4 +1,6 @@
-module.exports = {
+// import type { StorybookConfig } from '@storybook/core-common';
+
+const config = {
   stories: [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
@@ -17,3 +19,7 @@ module.exports = {
     builder: "@storybook/builder-webpack5"
   }
 }
+
+module.exports = config;
+
+// export default config;

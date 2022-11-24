@@ -1,3 +1,22 @@
+const path = require('node:path');
+
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
+// require('util').inspect.defaultOptions.depth = null
+// console.log(config.module.rules)
+
+module.exports = async ({ config, mode }) => {
+    config.resolve.plugins = [
+      new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, './tsconfig.json') })
+    ]
+   
+    return config;
+};
+
+//    config.module.rules.find(
+  // rule => rule.test.toString() === '/\\.css$'
+  // ).exclude = /\.module\.css$/
+
 // module.exports = async ({ config, mode }) => {
 
 //     config.module.rules.push({
