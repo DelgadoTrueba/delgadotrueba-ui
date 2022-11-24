@@ -25,11 +25,12 @@
   },
   "homepage": "https://github.com/DelgadoTrueba/delgadotrueba-ui#readme",
   "scripts": {
-    "stencil:build": "stencil build --docs",
-    "stencil:start": "stencil build --dev --watch --serve",
-    "stencil:test": "stencil test --spec --e2e",
-    "stencil:test.watch": "stencil test --spec --e2e --watchAll",
-    "sb:start": "start-storybook -p 6006",
+    "st:build": "stencil build --docs",
+    "st:build:watch": "stencil build --docs-readme --watch --serve",
+    "st:start": "stencil build --dev --watch --serve",
+    "st:test": "stencil test --spec --e2e",
+    "st:test.watch": "stencil test --spec --e2e --watchAll",
+    "sb:start": "start-storybook -p 6006 -s dist",
     "sb:build": "build-storybook"
   },
   "devDependencies": {
@@ -48,7 +49,7 @@
     "jest": "27.4.5",
     "jest-cli": "27.4.5",
     "lit-html": "2.4.0",
-    "puppeteer": "10.0.0"
-  },
-  "dependencies": {}
+    "puppeteer": "10.0.0",
+    "storybook": "6.5.13"
+  }
 }
