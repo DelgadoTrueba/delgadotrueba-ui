@@ -62,22 +62,16 @@ module.exports = {
         "absoluteImports": "core-js",
         "version": "3.26.1"
       }
-    ]
-  ],
-  "overrides": [
-    { // START ALLOW stories.jsx
-      "exclude": /(stories|story)\.mdx$/,
-      "plugins": [
-        "@babel/plugin-syntax-jsx",
-        [
-          "@babel/plugin-transform-react-jsx",
-          {
-            "runtime": "automatic",
-            "importSource": "jsx-dom"
-          },
-          "unique-name"
-        ]
+    ],
+    // START ALLOW stories.jsx
+    "@babel/plugin-syntax-jsx",
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "runtime": "automatic",
+          "importSource": "jsx-dom"
+        },
+        "unique-name"
       ]
-    }
-  ]
+  ],
 }

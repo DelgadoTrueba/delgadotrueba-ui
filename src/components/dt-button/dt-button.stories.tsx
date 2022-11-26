@@ -1,16 +1,17 @@
-// import readme from './readme.stories.mdx';
+// import readme from './readme.md';
+import readme from './readme.mdx';
 
 export default {
-    title: 'Demo/MyButton',
+    title: 'Components/DtButton',
     argTypes: {
       label: { type: 'text', description: 'The text which is shown as label' },
       onClick: { action: 'onClick' },
     },
-  //   parameters: {
-  //     docs: {
-  //       page: readme,
-  //     },
-  // },
+    parameters: {
+      docs: {
+        page: readme,
+      },
+  },
 };
 
 
