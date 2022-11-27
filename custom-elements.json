@@ -83,6 +83,28 @@
           "kind": "class",
           "description": "",
           "name": "MyComponent",
+          "cssProperties": [
+            {
+              "description": "Controls the color of foo",
+              "name": "--text-color"
+            },
+            {
+              "description": "Controls the color of bar",
+              "name": "--background-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Styles the color of bar",
+              "name": "bar"
+            }
+          ],
+          "slots": [
+            {
+              "description": "You can put some elements here",
+              "name": "container"
+            }
+          ],
           "members": [
             {
               "kind": "field",
