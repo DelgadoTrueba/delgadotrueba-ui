@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface DtButton {
+        "label": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -21,7 +24,17 @@ export namespace Components {
         "middle": string;
     }
 }
+export interface DtButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDtButtonElement;
+}
 declare global {
+    interface HTMLDtButtonElement extends Components.DtButton, HTMLStencilElement {
+    }
+    var HTMLDtButtonElement: {
+        prototype: HTMLDtButtonElement;
+        new (): HTMLDtButtonElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +42,15 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "dt-button": HTMLDtButtonElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface DtButton {
+        "label"?: string;
+        "onDtClick"?: (event: DtButtonCustomEvent<any>) => void;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +66,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "dt-button": DtButton;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +74,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "dt-button": LocalJSX.DtButton & JSXBase.HTMLAttributes<HTMLDtButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

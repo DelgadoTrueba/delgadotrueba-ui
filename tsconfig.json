@@ -20,6 +20,10 @@
     "src"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/**/*.stories.tsx",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.jsx",
+    "src/**/*.stories.js"
   ]
 }
