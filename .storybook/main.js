@@ -26,7 +26,35 @@ const config = {
   framework: "@storybook/web-components",
   core: {
     builder: "@storybook/builder-webpack5"
-  }
+  },
+  babel: async (options) => ({
+    ...options,
+    presets: [...options.presets],
+    plugins: [
+      ...options.plugins,
+       // START ALLOW JSX in stories.jsx
+      "@babel/plugin-syntax-jsx",
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "runtime": "automatic",
+          "importSource": "jsx-dom"
+        },
+        "unique-name"
+      ]
+    ]
+  }),
+  // typescript: {
+  //   check: false,
+  //   checkOptions: {},
+  //   reactDocgen: 'react-docgen-typescript',
+  //   reactDocgenTypescriptOptions: {
+  //     compilerOptions: {
+  //       allowSyntheticDefaultImports: false,
+  //       esModuleInterop: false,
+  //     },
+  //   }
+  // }
 }
 
 module.exports = config;
