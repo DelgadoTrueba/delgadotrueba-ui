@@ -1,6 +1,13 @@
+import readme from './readme.mdx';
+
 export default {
-    title: 'Components/MyComponent',
-    component: 'my-component'
+  title: 'Components/MyComponent',
+  component: 'my-component',
+  parameters: {
+    docs: {
+      page: readme,
+    },
+  },
 };
 
 

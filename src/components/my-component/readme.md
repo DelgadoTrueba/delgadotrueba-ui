@@ -14,6 +14,13 @@
 | `middle` | `middle`  | The middle name | `string` | `undefined` |
 
 
+## Slots
+
+| Slot          | Description                    |
+| ------------- | ------------------------------ |
+| `"container"` | You can put some elements here |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
