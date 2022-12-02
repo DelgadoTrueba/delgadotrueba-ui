@@ -49,7 +49,7 @@ declare global {
 declare namespace LocalJSX {
     interface DtButton {
         "label"?: string;
-        "onDtClick"?: (event: DtButtonCustomEvent<any>) => void;
+        "onDtClick"?: (event: DtButtonCustomEvent<MouseEvent>) => void;
     }
     interface MyComponent {
         /**

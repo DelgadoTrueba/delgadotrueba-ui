@@ -6,10 +6,10 @@ import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
   shadow: true,
 })
 export class DtButton {
-  @Event() dtClick: EventEmitter<any>;
+  @Event() dtClick: EventEmitter<MouseEvent>;
   @Prop() label: string;
 
-  todoCompletedHandler(event: UIEvent) {
+  todoCompletedHandler(event: MouseEvent) {
     this.dtClick.emit(event);
   }
 
