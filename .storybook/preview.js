@@ -6,7 +6,6 @@ import customElementsManifest from '../custom-elements.json';
 setCustomElementsManifest(customElementsManifest)
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     expanded: true,
     matchers: {
@@ -14,4 +13,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  // docs: {
+  //   source: {
+  //     type: "dynamic",
+  //   },
+  // },
 }

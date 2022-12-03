@@ -8,7 +8,7 @@ It can be further expanded with your own code snippets and include specific info
 
 For example:
 
-import { Story } from "@storybook/addon-docs";
+import { ArgsTable, Story, Canvas, Source} from "@storybook/addon-docs";
 
 ## Button
 
@@ -25,7 +25,21 @@ If you included the title in the story's default export, use this approach.
 
 ### Primary
 
-<dt-button label="example" id="example-button--primary" />
+<Canvas>
+    <Story id="components-dtbutton--default"/>
+</Canvas>
+
+<!--
+<Source 
+    id="components-dtbutton--default"
+    dark
+    format
+    language="tsx"
+    code={`
+        <dt-button label="Example" onDtClick={handleClick}/>;
+    `}
+/>
+-->
 
 ### Secondary
 
@@ -39,22 +53,6 @@ If you included the title in the story's default export, use this approach.
 
 <dt-button label="example" id="example-button--small" />
 
-## Without the story title defined
+# API
 
-If you didn't include the title in the story's default export, use this approach.
-
-### Primary
-
-<dt-button label="example" id="your-directory-button--primary"/>
-
-### Secondary
-
-<dt-button label="example" id="your-directory-button--secondary"/>
-
-### Large
-
-<dt-button label="example" id="your-directory-button--large"/>
-
-### Small
-
-<dt-button label="example" id="your-directory-button--small" />
+<ArgsTable of="dt-button" />

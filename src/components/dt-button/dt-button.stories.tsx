@@ -1,5 +1,5 @@
 // import readme from './readme.md';
-// import readme from './readme.mdx';
+import readme from './readme.mdx';
 
 export default {
     title: 'Components/DtButton',
@@ -9,34 +9,39 @@ export default {
         type: 'text',
         description: 'The text which is shown as label'
       },
-      dtClick: { 
-        action: 'onClick',
+      handleClick: { 
+        action: 'onDtClick',
         control: false 
       },
     },
-  //   parameters: {
-  //     docs: {
-  //       page: readme,
-  //     },
-  // },
+    parameters: {
+      docs: {
+        page: readme,
+      },
+  },
 };
 
 
 const Template = (args: any) => {
 
-  const handleClick = ($event: any) => {
-    args.dtClick($event)
-  }
-
   // const MyButton = document.createElement('dt-button');
   // MyButton.label = args.label;
-  // MyButton.addEventListener('onDtClick', handleClick );
+  // MyButton.addEventListener('onDtClick', args.handleClick );
   // return MyButton;
 
-  return <dt-button label={args.label} onDtClick={handleClick}/>;
+  return <dt-button label={args.label} onDtClick={args.handleClick}/>;
 }
 
 export const Default = Template.bind({}) as any;
 Default.args = {
-    label: "Example"
+    label: "Example2",
+};
+Default.parameters = {
+  docs: {
+    source: {
+      code: `<dt-button label="Example" onDtClick={handleClick}/>`,
+      type: "code",
+      // type: "dynamic",
+    },
+  },
 };
