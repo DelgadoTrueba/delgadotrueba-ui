@@ -13,9 +13,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  // docs: {
-  //   source: {
-  //     type: "dynamic",
-  //   },
-  // },
+  docs: {
+    source: {
+      type: "dynamic",
+    },
+  },
 }

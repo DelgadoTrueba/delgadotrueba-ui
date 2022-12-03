@@ -5,12 +5,7 @@ export default {
     title: 'Components/DtButton',
     component: 'dt-button',
     argTypes: {
-      label: { 
-        type: 'text',
-        description: 'The text which is shown as label'
-      },
-      handleClick: { 
-        action: 'onDtClick',
+      dtClick: { 
         control: false 
       },
     },
@@ -23,25 +18,20 @@ export default {
 
 
 const Template = (args: any) => {
+  // console.log({args})
 
+  const handleClick = ($event: CustomEvent) => {
+    args.onDtClick($event)
+  }
   // const MyButton = document.createElement('dt-button');
   // MyButton.label = args.label;
   // MyButton.addEventListener('onDtClick', args.handleClick );
   // return MyButton;
 
-  return <dt-button label={args.label} onDtClick={args.handleClick}/>;
+  return <dt-button label={args.label} onDtClick={handleClick}/>;
 }
 
 export const Default = Template.bind({}) as any;
 Default.args = {
     label: "Example2",
-};
-Default.parameters = {
-  docs: {
-    source: {
-      code: `<dt-button label="Example" onDtClick={handleClick}/>`,
-      type: "code",
-      // type: "dynamic",
-    },
-  },
 };

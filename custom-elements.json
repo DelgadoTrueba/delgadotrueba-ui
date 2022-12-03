@@ -20,15 +20,7 @@
             },
             {
               "kind": "method",
-              "name": "todoCompletedHandler",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
+              "name": "handleClick"
             },
             {
               "kind": "method",
@@ -49,7 +41,7 @@
             {
               "name": "dtClick",
               "type": {
-                "text": "EventEmitter<MouseEvent>"
+                "text": "EventEmitter<void>"
               }
             }
           ],
