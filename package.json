@@ -36,7 +36,7 @@
     "start": "npx concurrently --kill-other -n \"STENCIL, STORYBOOK\" -c \",bgBlue.bold,bgGreen.bold\" \"npm run st:manifest && npm run st:build:watch\" \"npx wait-on http://localhost:3333/ && npm run sb:start\""
   },
   "devDependencies": {
-    "@babel/core": "7.20.2",
+    "@babel/core": "7.20.5",
     "@babel/plugin-syntax-jsx": "7.18.6",
     "@babel/plugin-transform-react-jsx": "7.19.0",
     "@babel/plugin-transform-typescript": "7.20.2",
@@ -51,7 +51,7 @@
     "@storybook/manager-webpack5": "6.5.14",
     "@storybook/web-components": "6.5.14",
     "@types/jest": "27.0.3",
-    "@types/react": "18.0.25",
+    "@types/react": "18.0.26",
     "babel-loader": "9.1.0",
     "concurrently": "7.6.0",
     "create-stencil": "3.1.0",
