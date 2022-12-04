@@ -3,9 +3,11 @@ import readme from './readme.mdx';
 
 export default {
     title: 'Components/DtButton',
+    component: 'dt-button',
     argTypes: {
-      label: { type: 'text', description: 'The text which is shown as label' },
-      onClick: { action: 'onClick' },
+      dtClick: { 
+        control: false 
+      },
     },
     parameters: {
       docs: {
@@ -16,22 +18,20 @@ export default {
 
 
 const Template = (args: any) => {
+  // console.log({args})
 
-  const handleClick = ($event: any) => {
-    console.log("handleClick")
-    console.log($event)
-    args.onClick()
+  const handleClick = ($event: CustomEvent) => {
+    args.onDtClick($event)
   }
-
   // const MyButton = document.createElement('dt-button');
   // MyButton.label = args.label;
-  // MyButton.addEventListener('onDtClick', handleClick );
+  // MyButton.addEventListener('onDtClick', args.handleClick );
   // return MyButton;
 
-  return <dt-button label={args.label} onDtClick={(ev: any) => handleClick(ev)}/>;
+  return <dt-button label={args.label} onDtClick={handleClick}/>;
 }
 
 export const Default = Template.bind({}) as any;
 Default.args = {
-    label: "Example"
+    label: "Example2",
 };

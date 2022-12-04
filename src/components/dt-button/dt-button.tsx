@@ -6,14 +6,16 @@ import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
   shadow: true,
 })
 export class DtButton {
-  @Event() dtClick: EventEmitter<any>;
+  
+  @Event() dtClick: EventEmitter<void>;
+
   @Prop() label: string;
 
-  todoCompletedHandler(event: UIEvent) {
-    this.dtClick.emit(event);
+  handleClick() {
+    this.dtClick.emit();
   }
 
   render() {
-    return <button onClick={this.todoCompletedHandler.bind(this)}>{this.label}</button>;
+    return <button onClick={this.handleClick.bind(this)}>{this.label}</button>;
   }
 }

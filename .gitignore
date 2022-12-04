@@ -4,6 +4,9 @@ loader
 dist
 storybook-static
 
+# IDE
+.vscode
+
 # Logs
 logs
 *.log

@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/dt-button/dt-button.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "DtButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleClick"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "fieldName": "label",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "tagName": "dt-button",
+          "events": [
+            {
+              "name": "dtClick",
+              "type": {
+                "text": "EventEmitter<void>"
+              }
+            }
+          ],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DtButton",
+          "declaration": {
+            "name": "DtButton",
+            "module": "src/components/dt-button/dt-button.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "dt-button",
+          "declaration": {
+            "name": "DtButton",
+            "module": "src/components/dt-button/dt-button.tsx"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/my-component/my-component.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MyComponent",
+          "cssProperties": [
+            {
+              "description": "Controls the color of foo",
+              "name": "--text-color"
+            },
+            {
+              "description": "Controls the color of bar",
+              "name": "--background-color"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Styles the color of bar",
+              "name": "bar"
+            }
+          ],
+          "slots": [
+            {
+              "description": "You can put some elements here",
+              "name": "container"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "first",
+              "type": {
+                "text": "string"
+              },
+              "description": "The first name"
+            },
+            {
+              "kind": "field",
+              "name": "middle",
+              "type": {
+                "text": "string"
+              },
+              "description": "The middle name"
+            },
+            {
+              "kind": "field",
+              "name": "last",
+              "type": {
+                "text": "string"
+              },
+              "description": "The last name"
+            },
+            {
+              "kind": "method",
+              "name": "getText",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "first",
+              "fieldName": "first",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "middle",
+              "fieldName": "middle",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "last",
+              "fieldName": "last",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "tagName": "my-component",
+          "events": [],
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyComponent",
+          "declaration": {
+            "name": "MyComponent",
+            "module": "src/components/my-component/my-component.tsx"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-component",
+          "declaration": {
+            "name": "MyComponent",
+            "module": "src/components/my-component/my-component.tsx"
+          }
+        }
+      ]
+    }
+  ]
+}
