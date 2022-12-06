@@ -44,6 +44,7 @@
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
     "@custom-elements-manifest/analyzer": "0.6.6",
+    "@rbnlffl/rollup-plugin-eslint": "4.0.0",
     "@stencil/core": "2.19.3",
     "@storybook/addon-actions": "6.5.14",
     "@storybook/addon-docs": "6.5.14",
