@@ -13,10 +13,13 @@
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
       "isolatedModules": true,
-      "strict": true,
       "strictBindCallApply": true,
       "types": ["jest"],
-      "lib": ["dom", "esnext"]
+      "lib": ["dom", "esnext"],
+
+      "strict": false,
+      "strictNullChecks": true,
+      "strictPropertyInitialization": false,
     },
     "include": [
       "./components.d.ts",

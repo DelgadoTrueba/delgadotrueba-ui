@@ -8,15 +8,14 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json'],
+    project: [
+      './tsconfig.json',
+      './.storybook/tsconfig.json'
+    ],
   },
   ignorePatterns: [
     'node_modules',
-    '**/*d.ts',
-    'src/**/*.stories.tsx',
-    'src/**/*.stories.ts',
-    'src/**/*.stories.jsx',
-    'src/**/*.stories.js'
+    '**/*d.ts'
   ],
   rules: {
     '@typescript-eslint/strict-boolean-expressions': ['error', { allowString: true }],
