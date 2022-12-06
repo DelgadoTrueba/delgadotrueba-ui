@@ -1,11 +1,18 @@
 const path = require('node:path');
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 // require('util').inspect.defaultOptions.depth = null
 // console.log(config.module.rules)
 
 module.exports = async ({ config, mode }) => {
+
+    config.plugins.push(
+      new ESLintPlugin({
+        extensions: ['stories.tsx']
+      })
+    )
     config.resolve.plugins = [
       new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, './tsconfig.json') })
     ]

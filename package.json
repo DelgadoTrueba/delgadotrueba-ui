@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/DelgadoTrueba/delgadotrueba-ui#readme",
   "scripts": {
+    "linter": "npx eslint -c .eslintrc.js src/**/*.{ts,tsx}",
     "st:build": "stencil build --docs",
     "st:build:watch": "stencil build --docs-readme --watch --serve",
     "st:start": "stencil build --dev --watch --serve",
     "st:test": "stencil test --spec --e2e",
     "st:test.watch": "stencil test --spec --e2e --watchAll",
     "st:manifest": "npx cem analyze --stencil --globs 'src/**/*.tsx' --exclude 'src/**/*stories.tsx'",
-    "st:linter": "npx eslint -c .eslintrc.js src/**/*.{ts,tsx} --debug",
     "sb:start": "start-storybook -p 6006 -s dist",
     "sb:build": "build-storybook",
     "start": "npx concurrently --kill-other -n \"STENCIL, STORYBOOK\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run st:manifest && npm run st:build:watch\" \"npx wait-on http://localhost:3333/ && npm run sb:start\""
@@ -66,6 +66,7 @@
     "eslint-plugin-n": "15.5.1",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-promise": "6.1.1",
+    "eslint-webpack-plugin": "3.2.0",
     "husky": "8.0.2",
     "jest": "27.4.5",
     "jest-cli": "27.4.5",
