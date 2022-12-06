@@ -3,7 +3,7 @@ import readme from './readme.mdx';
 export default {
   title: 'Components/MyComponent',
   component: 'my-component',
-  parameters: {
+  parameters: { 
     docs: {
       page: readme,
     },

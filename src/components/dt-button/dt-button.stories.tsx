@@ -1,4 +1,3 @@
-// import readme from './readme.md';
 import readme from './readme.mdx';
 
 export default {

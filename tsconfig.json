@@ -15,10 +15,12 @@
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h",
+    "strict": true,
     "strictNullChecks": true,
-    "strict": true
+    "strictPropertyInitialization": false,
   },
   "include": [
+    "./global.d.ts",
     "src"
   ],
   "exclude": [
@@ -26,6 +28,7 @@
     "src/**/*.stories.tsx",
     "src/**/*.stories.ts",
     "src/**/*.stories.jsx",
-    "src/**/*.stories.js"
+    "src/**/*.stories.js",
+    "src/**/*.mdx",
   ]
 }
