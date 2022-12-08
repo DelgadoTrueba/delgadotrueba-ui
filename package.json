@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/DelgadoTrueba/delgadotrueba-ui#readme",
   "scripts": {
+    "linter": "npx eslint -c .eslintrc.js src/**/*.{ts,tsx}",
     "st:build": "stencil build --docs",
     "st:build:watch": "stencil build --docs-readme --watch --serve",
     "st:start": "stencil build --dev --watch --serve",
@@ -44,6 +45,7 @@
     "@commitlint/config-conventional": "17.3.0",
     "@custom-elements-manifest/analyzer": "0.6.6",
     "@stencil/core": "2.19.3",
+    "@stencil/eslint-plugin": "0.4.0",
     "@storybook/addon-actions": "6.5.14",
     "@storybook/addon-docs": "6.5.14",
     "@storybook/addon-essentials": "6.5.14",

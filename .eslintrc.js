@@ -3,8 +3,15 @@ module.exports = {
     browser: true,
     es2021: true
   },
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
   extends: [
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    "plugin:@stencil/recommended",
     'standard-with-typescript',
     'plugin:prettier/recommended'
   ],
@@ -32,5 +39,11 @@ module.exports = {
     ".*"
   ],
   rules: {
-  }
+    "react/no-unknown-property": ['error', { ignore: ['class'] }],
+    '@stencil/strict-boolean-conditions': "off",
+    "@stencil/decorators-context": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": ["error", {varsIgnorePattern: 'h' }],
+    '@typescript-eslint/strict-boolean-expressions': ['error', { allowString: true }],
+  },
 }
