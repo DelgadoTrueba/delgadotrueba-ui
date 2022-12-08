@@ -1,5 +1,8 @@
 import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+
+function format(first: string, middle: string, last: string): string {
+  return (first || '') + (middle ? ` ${middle}` : '') + (last ? ` ${last}` : '');
+}
 
 /**
  * @slot container - You can put some elements here
@@ -34,7 +37,7 @@ export class MyComponent {
     return format(this.first, this.middle, this.last);
   }
 
-  render() {
-    return <div class="title">Hello, World! I'm {this.getText()}</div>;
+  render(): JSX.Element {
+    return <div class="title">Hello, World! I&apos;m {this.getText()}</div>;
   }
 }
