@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     'standard-with-typescript',
     'plugin:prettier/recommended',
-    // "plugin:@stencil/recommended"
+    "plugin:@stencil/recommended"
   ],
   overrides: [],
   parserOptions: {
@@ -19,10 +19,16 @@ module.exports = {
   },
   ignorePatterns: [
     'node_modules',
+    'dist',
+    'loader',
+    'www',
     '**/*.d.ts',
     "stencil.config.ts"
   ],
   rules: {
     '@typescript-eslint/strict-boolean-expressions': ['error', { allowString: true }],
+    "react/jsx-no-bind": [ "error", { "ignoreDOMComponents": true } ],
+    '@stencil/strict-boolean-conditions': "off",
+    "@stencil/decorators-context": "off",
   },
 };

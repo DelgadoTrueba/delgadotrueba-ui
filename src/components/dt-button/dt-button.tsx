@@ -10,7 +10,7 @@ export class DtButton {
 
   @Prop() label: string;
 
-  handleClick(): void {
+  private handleClick(): void {
     this.dtClick.emit();
   }
 
