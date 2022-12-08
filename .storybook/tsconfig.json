@@ -1,4 +1,5 @@
 {
+    "extends": "../tsconfig.base",
     "compileOnSave": false,
     "compilerOptions": {
       "baseUrl": ".",
@@ -13,13 +14,8 @@
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
       "isolatedModules": true,
-      "strictBindCallApply": true,
       "types": ["jest"],
       "lib": ["dom", "esnext"],
-
-      "strict": false,
-      "strictNullChecks": true,
-      "strictPropertyInitialization": false,
     },
     "include": [
       "./components.d.ts",
