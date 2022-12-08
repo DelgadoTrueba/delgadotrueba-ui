@@ -1,8 +1,9 @@
 :host {
-  display: block;
   --title-color: red;
+
+  display: block;
 }
 
-.title{
-  color: var(--title-color)
+.title {
+  color: var(--title-color);
 }
