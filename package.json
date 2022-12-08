@@ -28,7 +28,7 @@
     "st:linter": "npx tsc --noEmit -p ./tsconfig.json",
     "sb:linter": "npx tsc --noEmit -p ./.storybook/tsconfig.json",
     "css:linter": "npx stylelint \"**/*.css\"",
-    "linter": "npx concurrently --kill-other -n \"ST:LINTER,SB:LINTER,ESLINT\" -c \"bgBlue.bold,bgGreen.bold,bgMagenta\" \"npm run st:linter\" \"npm run sb:linter\" \"npx eslint -c .eslintrc.js src/**/*.{ts,tsx}\"",
+    "linter": "npx concurrently --kill-other -n \"ST:LINTER,SB:LINTER,ESLINT,CSS:LINTER\" -c \"bgBlue,bgGreen,bgMagenta,bgYellow\" \"npm run st:linter\" \"npm run sb:linter\" \"npx eslint -c .eslintrc.js src/**/*.{ts,tsx}\" \"npm run css:linter\"",
     "st:build": "stencil build --docs",
     "st:build:watch": "stencil build --docs-readme --watch --serve",
     "st:start": "stencil build --dev --watch --serve",
