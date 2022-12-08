@@ -1,0 +1,4 @@
+{
+	"**/*.{ts,tsx}": ["bash -c 'npm run st:linter'", "eslint"],
+	"**/*.stories.tsx": ["bash -c 'npm run sb:linter'", "eslint"]
+}
