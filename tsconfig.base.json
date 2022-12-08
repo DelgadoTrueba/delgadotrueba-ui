@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "noEmitOnError": true,
+      "allowSyntheticDefaultImports": true,
+      
+      "strict": false,
+      "strictNullChecks": true,
+      "strictPropertyInitialization": false,
+      "strictBindCallApply": true,
+    }
+  }
+  
