@@ -1,47 +1,45 @@
 {
-    "compileOnSave": false,
+  "extends": "../tsconfig.base",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "incremental": false,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "target": "ES2020",
+    "module": "CommonJS",
+    "skipLibCheck": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "types": ["jest"],
+    "lib": ["dom", "esnext"],
+  },
+  "include": [
+    "./components.d.ts",
+    "./global.d.ts",
+      "../src/stories/*",
+      "../src/**/*.stories.tsx",
+      "../src/**/*.stories.ts",
+      "../src/**/*.stories.jsx",
+      "../src/**/*.stories.js"
+  ],
+  "exclude": [
+      "../dist", 
+      "../**/dist", 
+      "../node_modules", 
+      "../**/node_modules", 
+      "../**/setup-jest.ts",
+      "../src/**/*.test.*",
+      "../src/__tests__/**/*"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
     "compilerOptions": {
-      "baseUrl": ".",
-      "incremental": false,
-      "noImplicitAny": true,
-      "forceConsistentCasingInFileNames": true,
-      "jsx": "react-jsx",
-      "moduleResolution": "Node",
-      "target": "ES2020",
-      "module": "CommonJS",
-      "skipLibCheck": false,
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "isolatedModules": true,
-      "strict": true,
-      "strictBindCallApply": true,
-      "types": ["jest"],
-      "lib": ["dom", "esnext"]
-    },
-    "include": [
-      "./components.d.ts",
-      "./global.d.ts",
-        "../src/stories/*",
-        "../src/**/*.stories.tsx",
-        "../src/**/*.stories.ts",
-        "../src/**/*.stories.jsx",
-        "../src/**/*.stories.js"
-    ],
-    "exclude": [
-        "../dist", 
-        "../**/dist", 
-        "../node_modules", 
-        "../**/node_modules", 
-        "../**/setup-jest.ts",
-        "../src/**/*.test.*",
-        "../src/__tests__/**/*"
-    ],
-    "ts-node": {
-      "transpileOnly": true,
-      "files": true,
-      "compilerOptions": {
-        "types": ["node"]
-      }
+      "types": ["node"]
     }
   }
-  
+}
