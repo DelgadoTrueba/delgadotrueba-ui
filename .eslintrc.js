@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'standard-with-typescript',
+    'plugin:prettier/recommended'
   ],
   overrides: [
   ],
@@ -14,7 +15,17 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    'prettier'
+  ],
+  ignorePatterns: [
+    'node_modules',
+    'dist',
+    'loader',
+    'www',
+    '**/*.d.ts',
+    "stencil.config.ts",
+    ".*"
   ],
   rules: {
   }
