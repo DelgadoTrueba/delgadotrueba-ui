@@ -1,4 +1,5 @@
 import readme from './readme.mdx';
+import type { Components as St } from '../../components';
 
 export default {
   title: 'Components/MyComponent',
@@ -10,7 +11,7 @@ export default {
   },
 };
 
-const Template = (args: any): JSX.Element => {
+const Template = (args: St.MyComponent): JSX.Element => {
   return <my-component first={args.first} last={args.last}></my-component>;
 };
 
