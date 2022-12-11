@@ -1,0 +1,24 @@
+{
+  "name": "delgadotrueba-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/delgadotrueba-ui/src",
+  "projectType": "library",
+  "generators": {
+    "@nxext/stencil:component": {
+      "style": "scss"
+    }
+  },
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nxext/stencil:test",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/delgadotrueba-ui/tsconfig.lib.json",
+        "configPath": "libs/delgadotrueba-ui/stencil.config.ts",
+        "outputPath": "dist/libs/delgadotrueba-ui"
+      }
+    }
+  }
+}
